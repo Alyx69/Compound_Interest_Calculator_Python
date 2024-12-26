@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .calculator-form {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Compound Interest Calculator</h1>
+
+    <div class="calculator-form">
+        <form method="POST" action="/">
+            <label for="initial_deposit">Initial Deposit</label>
+            <input type="number" name="initial_deposit" id="initial_deposit" step="100" required>
+
+            <label for="interest_rate">Interest Rate (%)</label>
+            <input type="number" name="interest_rate" id="interest_rate" step="0.01" required>
+
+            <label for="contribution">Contribution</label>
+            <input type="number" name="contribution" id="contribution" step="10" required>
+
+            <label for="compounding_type">Compounding Type</label>
+            <select id="compounding_type" name="compounding_type">
+                <option value="monthly">Monthly</option>
+                <option value="annual">Annually</option>
+            </select>
+
+            <label for="time_period_years">Time Period (Years)</label>
+            <input type="number" id="time_period_years" name="time_period_years" step="1" required>
+
+            <input type="submit" value="Calculate">
+        </form>
+    </div>
+</body>
+</html>
